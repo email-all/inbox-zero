@@ -13,6 +13,7 @@ const withMDX = nextMdx({
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  allowedDevOrigins: ["127.0.0.1"],
   logging: {
     browserToTerminal: true,
   },
@@ -124,6 +125,11 @@ const nextConfig: NextConfig = {
       {
         source: "/linkedin",
         destination: "https://go.getinboxzero.com/linkedin",
+        permanent: true,
+      },
+      {
+        source: "/contact",
+        destination: "/support",
         permanent: true,
       },
       {
